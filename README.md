@@ -1,9 +1,11 @@
-# 🐼 NFT-Generator
+# 🦧 **NFT-Generator** ***Alpha***
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=5MTHH82ABTJDA)
+
 **This is an open source project that allows you to generate NFT from a base template and plugins.**
 
 ![](https://github.com/zabbix-byte/NFT-Generator/blob/main/created.jpeg)
 
-This is the firt version of the app.
 ```
               ______     _     _     _      
              |___  /    | |   | |   (_)     
@@ -29,7 +31,7 @@ This is the firt version of the app.
       |___/   
 ```
 
-### **Usage** 🐧
+# 🦫 **Usage** 
 All the imagenes need to be PNG
 1. You need to generate a base design
 2. You need to generate backgrounds (Important that they are of the same resolution as the base design)
