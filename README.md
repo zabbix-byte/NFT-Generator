@@ -1,5 +1,5 @@
 # 🐼 NFT-Generator
-This is an open source project that allows you to generate NFT from a base template and plugins.
+**This is an open source project that allows you to generate NFT from a base template and plugins.**
 
 ![](https://github.com/zabbix-byte/NFT-Generator/blob/main/created.jpeg)
 
@@ -36,7 +36,7 @@ All the imagenes need to be PNG
 3. You have to declare the types of components that the NFT will have (hat, glasses ... what you want)
 4. You have to say where the component is located and its type
 
-Where is this configured?
+**Where is this configured?**
 ```
 config_app.json
 ```
