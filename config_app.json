@@ -1,0 +1,9 @@
+{
+    "Base template": "images/capy.png",
+    "Backgrounds": ["images/fundal.png"],
+    "Types components": ["skirt", "glasses", "hat"],
+    "Components": [
+        {"file":"images/funda.png", "type": "skirt"},
+        {"file":"images/sapca.png", "type": "hat"}
+    ]
+}
