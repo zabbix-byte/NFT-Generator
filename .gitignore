@@ -1,4 +1,3 @@
 *.png
-images/
 __pycache__/
 *.pyc
