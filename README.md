@@ -3,28 +3,28 @@ This is an open source project that allows you to generate NFT from a base templ
 
 This is the firt version of the app.
 ```
-          ______     _     _     _      
-         |___  /    | |   | |   (_)     
-            / / __ _| |__ | |__  ___  __
-           / / / _` | '_ \| '_ \| \ \/ /
-          / /_| (_| | |_) | |_) | |>  < 
-         /_____\__,_|_.__/|_.__/|_/_/\_\
-                                                           
-               _   _ ______ _______ 
-              | \ | |  ____|__   __|
-              |  \| | |__     | |   
-              | . ` |  __|    | |   
-              | |\  | |       | |   
-              |_| \_|_|       |_|   
+              ______     _     _     _      
+             |___  /    | |   | |   (_)     
+                / / __ _| |__ | |__  ___  __
+               / / / _` | '_ \| '_ \| \ \/ /
+              / /_| (_| | |_) | |_) | |>  < 
+             /_____\__,_|_.__/|_.__/|_/_/\_\
+                                                               
+                   _   _ ______ _______ 
+                  | \ | |  ____|__   __|
+                  |  \| | |__     | |   
+                  | . ` |  __|    | |   
+                  | |\  | |       | |   
+                  |_| \_|_|       |_|   
                                     
-                                  _             
-                                 | |            
-   __ _  ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
-  / _` |/ _ \ '_ \ / _ \ '__/ _` | __/ _ \| '__|
- | (_| |  __/ | | |  __/ | | (_| | || (_) | |   
-  \__, |\___|_| |_|\___|_|  \__,_|\__\___/|_|   
-   __/ |                                        
-  |___/   
+                                      _             
+                                     | |            
+       __ _  ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
+      / _` |/ _ \ '_ \ / _ \ '__/ _` | __/ _ \| '__|
+     | (_| |  __/ | | |  __/ | | (_| | || (_) | |   
+      \__, |\___|_| |_|\___|_|  \__,_|\__\___/|_|   
+       __/ |                                        
+      |___/   
 ```
 
 ### **Usage**
@@ -59,7 +59,7 @@ The app will be in a very early phase, it does not have a compiled version, you 
 
 ```sh
 pip install -r requirements.txt # This is use to install the requirements of the app
-python nftpGenerator.py 10 # the "10" is the number of NFT will be generate
-```
-Python:
-https://www.python.org
+python nftpGenerator.py 10 # the "10" is "Components": [
+        {"file":"images/funda.png", "type": "skirt"},
+        {"file":"images/sapca.png", "type": "hat"}
+    ]
