@@ -66,3 +66,6 @@ The app will be in a very early phase, it does not have a compiled version, you 
 pip install -r requirements.txt # This is use to install the requirements of the app
 python nftpGenerator.py 10 # the "10" is the number of nft will be generated
 ```
+
+#### UI Development Status
+![](https://github.com/zabbix-byte/NFT-Generator/blob/main/comming_soon.jpg)
