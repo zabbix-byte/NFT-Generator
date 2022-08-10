@@ -60,7 +60,7 @@ Example:
 
 How to run the app:
 
-The app will be in a very early phase, it does not have a compiled version, you will have to install the `requirements.txt` and run the application in python
+The app are in a very early phase, it does not have a compiled version, you will have to install the `requirements.txt` and run the application in python
 
 ```sh
 pip install -r requirements.txt # This is use to install the requirements of the app
