@@ -32,7 +32,7 @@
                    |___/   
 ```
 
-# 🦫 **Usage** 
+# 🦧 **Usage** 
 All the imagenes need to be PNG
 1. You need to generate a base design
 2. You need to generate backgrounds (Important that they are of the same resolution as the base design)
