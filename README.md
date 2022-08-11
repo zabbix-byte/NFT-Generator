@@ -68,4 +68,4 @@ python nftpGenerator.py 10 # the "10" is the number of nft will be generated
 ```
 
 #### UI Development Status
-![](https://github.com/zabbix-byte/NFT-Generator/blob/main/comming_soon.jpg)
+![](https://github.com/zabbix-byte/NFT-Generator/blob/main/comming_soon_new.jpg.jpg)
