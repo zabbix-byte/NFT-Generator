@@ -32,7 +32,7 @@
                    |___/   
 ```
 
-# 🦫 **Usage** 
+# 🦧 **Usage** 
 All the imagenes need to be PNG
 1. You need to generate a base design
 2. You need to generate backgrounds (Important that they are of the same resolution as the base design)
@@ -60,9 +60,12 @@ Example:
 
 How to run the app:
 
-The app will be in a very early phase, it does not have a compiled version, you will have to install the `requirements.txt` and run the application in python
+The app are in a very early phase, it does not have a compiled version, you will have to install the `requirements.txt` and run the application in python
 
 ```sh
 pip install -r requirements.txt # This is use to install the requirements of the app
 python nftpGenerator.py 10 # the "10" is the number of nft will be generated
 ```
+
+#### UI Development Status
+![](https://github.com/zabbix-byte/NFT-Generator/blob/main/comming_soon.jpg)
