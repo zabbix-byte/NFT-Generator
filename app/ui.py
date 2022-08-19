@@ -9,50 +9,19 @@ import sys
 file_name_config = './config_app.json'
 
 
-class BaseUI(ThemedTk):
-    backgrounds_list = {}
-
+class TKAPP(ThemedTk):
     def __init__(self) -> None:
         super().__init__()
-        self.font_family = ('Inter', 11)
-        self.app_windows_x = 1280
-        self.app_window_y = 720
-        self.theme = 'yaru'
 
-        self.title('NFT Generator Alpha')
-        self.configure(background='white',)
+class MenusAndHeaders:
+    def __init__(self, font_f) -> None:
+        self.font_family = font_f
+        self.load()
 
-        self.geometry(f'{self.app_windows_x}x{self.app_window_y}')
-        self.minsize(self.app_windows_x, self.app_window_y)
-        self.maxsize(self.app_windows_x, self.app_window_y)
-
+    def load(self):
         barra_menus = tk.Menu()
         barra_menus.configure(background='white', borderwidth=1)
         barra_menus.add_separator()
-
-        # me da palo inventar mas variables ma cago en la puta
-        ndofsdgndfng = tk.Canvas(width=400, height=400, bg='white')
-        ndofsdgndfng.place(relx=0.1,
-                     rely=0.45,
-                     anchor='w')
-    
-
-        file_name_config = './config_app.json'
-        file_config_e = open(file_name_config, 'r')
-        file_config = json.load(file_config_e)
-        file_config_e.close()
-
-        if file_config['Base template'] != None:
-            self.base_file(file_config['Base template'], False)
-
-        self.backgrounds()
-
-
-            
-
-        if file_config['Components'] != None:
-            self.components_files = file_config['Components']
-            self.components()
 
         menu_list = [{'SELECT TEMPLATE': self.add_base_file}, {'ADD BACKGROUND': self.add_background},
                       {'ADD COMPONENT': None}]
@@ -85,9 +54,93 @@ class BaseUI(ThemedTk):
                                 activeforeground='white',
                                 font=self.font_family,
                                 )
-
         self.config(menu=barra_menus)
 
+class Background:
+    backgrounds_list = {}
+    
+    def __init__(self) -> None:
+        self.load()
+        
+
+    def load(self):
+        c = 0.08
+        file_config_e = open(file_name_config, 'r')
+        file_config = json.load(file_config_e)
+        file_config_e.close()
+
+        self.backgrounds_list = {}
+
+        if len(file_config['Backgrounds']) >  0:
+            self.backgrounds_files = file_config['Backgrounds']
+
+            for i in self.backgrounds_files:
+                print(i)
+                if sys.platform.lower() == 'linux':
+                    p = i.split('/')[-1].split('.')[0]
+                if sys.platform.lower() == 'win32':
+                    p = i.split('\\')[-1].split('.')[0]
+
+                ne_l = tk.Label(self, text=p, width=20)
+                ne_l.config(font=self.font_family, background='white')
+                ne_l.place(relx=0.61,
+                        rely=c,
+                        anchor='n')
+
+                self.backgrounds_list[i] = ne_l
+
+                boton = ttk.Button(self, text='X', command=lambda: self.remove_item({'Backgrounds': i}))
+                boton.config(width=1)
+                boton.place(relx=0.68,
+                    rely=c,
+                    anchor='n')
+                
+                self.backgrounds_list[f'{i}_btn'] = boton
+
+                c += 0.05
+
+class BaseUI(TKAPP, MenusAndHeaders, Background):
+    def __init__(self) -> None:
+        self.font_family = ('Inter', 11)
+
+        TKAPP.__init__(self)
+        MenusAndHeaders.__init__(self, self.font_family)
+        Background.__init__(self)
+        
+        self.app_windows_x = 1280
+        self.app_window_y = 720
+        self.theme = 'yaru'
+
+        self.title('NFT Generator Alpha')
+        self.configure(background='white',)
+
+        self.geometry(f'{self.app_windows_x}x{self.app_window_y}')
+        self.minsize(self.app_windows_x, self.app_window_y)
+        self.maxsize(self.app_windows_x, self.app_window_y)
+
+       
+
+        # me da palo inventar mas variables ma cago en la puta
+        ndofsdgndfng = tk.Canvas(width=400, height=400, bg='white')
+        ndofsdgndfng.place(relx=0.1,
+                     rely=0.45,
+                     anchor='w')
+    
+
+        file_name_config = './config_app.json'
+        file_config_e = open(file_name_config, 'r')
+        file_config = json.load(file_config_e)
+        file_config_e.close()
+
+        if file_config['Base template'] != None:
+            self.base_file(file_config['Base template'], False)
+    
+
+        if file_config['Components'] != None:
+            self.components_files = file_config['Components']
+            self.components()
+
+    
         self.text()
 
         ttk.Separator(
@@ -129,44 +182,7 @@ class BaseUI(ThemedTk):
                    anchor='n')
 
             c += 0.05
-
-    def backgrounds(self):
-        c = 0.08
-        file_config_e = open(file_name_config, 'r')
-        file_config = json.load(file_config_e)
-        file_config_e.close()
-
-        self.backgrounds_list = {}
-
-        if len(file_config['Backgrounds']) >  0:
-            self.backgrounds_files = file_config['Backgrounds']
-
-            print(self.backgrounds_files)
-
-            for i in self.backgrounds_files:
-                print(i)
-                if sys.platform.lower() == 'linux':
-                    p = i.split('/')[-1].split('.')[0]
-                if sys.platform.lower() == 'win32':
-                    p = i.split('\\')[-1].split('.')[0]
-
-                ne_l = tk.Label(self, text=p, width=20)
-                ne_l.config(font=self.font_family, background='white')
-                ne_l.place(relx=0.61,
-                        rely=c,
-                        anchor='n')
-
-                self.backgrounds_list[i] = ne_l
-
-                boton = ttk.Button(self, text='X', command=lambda: self.remove_item({'Backgrounds': i}))
-                boton.config(width=1)
-                boton.place(relx=0.68,
-                    rely=c,
-                    anchor='n')
-                
-                self.backgrounds_list[f'{i}_btn'] = boton
-
-                c += 0.05
+        
 
     def add_background(self):
         file_config_e = open(file_name_config, 'r')
@@ -301,5 +317,15 @@ class BaseUI(ThemedTk):
             self.base_file(filename, True)
 
 
-app = BaseUI()
+
+
+
+
+
+    
+class App(BaseUI):
+    def __init__(self) -> None:
+        super().__init__()
+
+app = App()
 app.mainloop()
