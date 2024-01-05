@@ -1,4 +1,4 @@
-# 🦧 **NFT-Generator** ***Alpha***
+# 🦧 **NFT-Generator**
 #### SOON UI 
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=5MTHH82ABTJDA)
